@@ -12,12 +12,13 @@ const timeLine = document.querySelector('.time_lines');
 
 MyBtn.onclick = () => {
     //alert('clicked');
-    MyQuiz.style.opacity=0;
+    MyQuiz.style.opacity = 0;
     RulesBox.classList.add('activeInfo');
 }
 
 exitButton.onclick = () => {
     //alert('clicked');
+    MyQuiz.style.opacity = 1;
     RulesBox.classList.remove('activeInfo');
 }
 
@@ -90,7 +91,7 @@ function showQuestions(index) {
 
     for (let i = 0; i < option.length; i++) {
         //console.log(option[i]);
-        option[i].addEventListener("click", function () {
+        option[i].addEventListener("click", function() {
             optionSelected(this);
         });
     }
@@ -113,8 +114,7 @@ function showQuestions(index) {
             answer.classList.add('correct');
             answer.insertAdjacentHTML('beforeend', thik);
             //console.log("Correct Answer");
-        }
-        else {
+        } else {
             answer.classList.add('incorrect');
             answer.insertAdjacentHTML('beforeend', cross);
             //console.log("Wrong Answer");
@@ -174,6 +174,7 @@ function showResultBox() {
 
 function startTimer(time) {
     counter = setInterval(timer, 1000);
+
     function timer() {
         timeCount.textContent = time;
         time--;
@@ -186,8 +187,10 @@ function startTimer(time) {
         }
     }
 }
+
 function startTimerLine(time) {
     counterLine = setInterval(timer, 47);
+
     function timer() {
         time += 1;
         timeLine.style.width = time + 'px';
