@@ -183,6 +183,7 @@ function startTimer(time) {
         }
         if (time < 0) {
             timeCount.textContent = "00";
+            nextButton.style.display = "block";
             clearInterval(counter);
         }
     }
