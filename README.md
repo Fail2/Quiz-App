@@ -4,7 +4,6 @@ This is a simple quiz app
 - HTML
 - CSS
 - JavaScript(ES6+)
-- Tailwind
 - DOM
 ## Live Link
 
